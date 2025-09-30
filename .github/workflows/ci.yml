@@ -3,6 +3,7 @@ on:
   push:
   pull_request:
 
+# Some orgs require this; harmless elsewhere
 permissions:
   contents: read
   actions: write
@@ -25,6 +26,7 @@ jobs:
         with:
           configPath: ./.lighthouserc.json
           runs: 1
-          uploadArtifacts: true
-          artifactName: lhci-${{ github.run_number }}
+          # Workaround: disable GitHub artifact upload (avoids 400)
+          uploadArtifacts: false
+          # Keep temporary public storage so you still get a shareable report URL
           temporaryPublicStorage: true
