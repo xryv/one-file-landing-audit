@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>One-File Landing Audit — Lighthouse-ready, a11y-first, zero-deps</title>
+  <meta name="description" content="Ultra-fast landing template with a built-in audit HUD for clarity, accessibility, and LCP. Zero dependencies. Open index.html and ship.">
+  <link rel="canonical" href="https://example.com/">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="One-File Landing Audit">
+  <meta property="og:description" content="Lighthouse-ready landing with built-in clarity/a11y/LCP audit HUD.">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="assets/hero.svg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="One-File Landing Audit">
+  <meta name="twitter:description" content="Lighthouse-ready landing with built-in clarity/a11y/LCP audit HUD.">
+  <meta name="twitter:image" content="assets/hero.svg">
+
+  <!-- Preload LCP image -->
+  <link rel="preload" as="image" href="assets/hero.svg" imagesrcset="assets/hero.svg">
+
+  <!-- JSON-LD: Website + Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "WebSite", "name": "One-File Landing Audit", "url": "https://example.com/", "inLanguage": "en" },
+      { "@type": "Organization", "name": "YourOrg", "url": "https://example.com/", "logo": "assets/hero.svg" }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="#">One-File Landing Audit</a>
+      <button class="btn ghost small" data-theme-toggle aria-label="Toggle theme">Theme</button>
+      <a class="btn link small" href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main id="main" class="site-main" tabindex="-1">
+    <!-- HERO (LCP target) -->
+    <section class="hero" aria-labelledby="h1">
+      <div class="hero-media">
+        <img src="assets/hero.svg" width="720" height="360" alt="Clean geometric hero illustration" decoding="async" loading="eager" fetchpriority="high">
+      </div>
+      <div class="hero-copy">
+        <h1 id="h1">Ship a Lighthouse-ready landing with a live clarity & a11y audit HUD.</h1>
+        <p class="lead">Open <code>index.html</code>, toggle <code>?audit</code>, fix what matters. No build. Zero deps.</p>
+        <div class="cta-row">
+          <a href="#get-started" class="btn primary" data-cta="primary">Use this template</a>
+          <a href="#how-it-works" class="btn secondary">How it works</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="proof" aria-label="Social proof">
+      <ul class="proof-logos">
+        <li aria-label="Performance first">⚡</li>
+        <li aria-label="Accessibility minded">♿</li>
+        <li aria-label="Privacy friendly">🛡️</li>
+        <li aria-label="Zero dependencies">0️⃣</li>
+      </ul>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works" class="grid-section">
+      <h2>Clarity. A11y. Fold fit. In one file.</h2>
+      <p>Audit HUD checks your hero word count, CTA visibility, fold fit for common viewports, focus order, motion policy, and LCP.</p>
+      <ol class="steps">
+        <li>Clone, open <code>index.html</code>.</li>
+        <li>Add <code>?audit</code> to the URL or press <kbd>G</kbd>.</li>
+        <li>Follow inline tips; aim for ≥95 Lighthouse and ≥90 a11y.</li>
+      </ol>
+    </section>
+
+    <!-- Pricing / CTA -->
+    <section id="get-started" class="cta-panel" aria-labelledby="cta-title">
+      <h2 id="cta-title">Start free. Keep it forever.</h2>
+      <p>MIT-licensed, copy-and-ship. Works offline, on any static host.</p>
+      <a href="#" class="btn primary">Download ZIP</a>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Does it need a build?</summary>
+        <div>No. Open <code>index.html</code>. CI uses Lighthouse for you.</div>
+      </details>
+      <details>
+        <summary>Is JavaScript required?</summary>
+        <div>No for the page; yes for the optional Audit HUD and reveals. Without JS, content and CTA remain fully usable.</div>
+      </details>
+      <details>
+        <summary>Can I track visitors?</summary>
+        <div>Not by default. See the commented analytics block in the HTML for a privacy-friendly snippet.</div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> YourOrg — MIT</small>
+  </footer>
+
+  <!-- Optional privacy-friendly analytics (commented) -->
+  <!--
+  <script defer data-domain="yourdomain.com" src="https://plausible.io/js/script.js"></script>
+  -->
+
+  <!-- Audit HUD container (hidden by default) -->
+  <aside id="audit" class="audit" aria-live="polite" hidden></aside>
+
+  <script src="app.js"></script>
+</body>
+</html>

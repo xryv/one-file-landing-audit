@@ -1,0 +1,19 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Abstract performance illustration</title>
+  <desc id="desc">Geometric shapes suggesting speed, clarity, and accessibility.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5BA1FF"></stop>
+      <stop offset="1" stop-color="#005CFF"></stop>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="#0B1221"></rect>
+  <g transform="translate(100,100)">
+    <rect x="0" y="0" width="1000" height="400" rx="24" fill="#121B31" stroke="#1d2a4a"></rect>
+    <circle cx="200" cy="200" r="120" fill="url(#g)"></circle>
+    <rect x="380" y="120" width="460" height="28" rx="6" fill="#E6EEFC"></rect>
+    <rect x="380" y="170" width="420" height="20" rx="6" fill="#98A2B3"></rect>
+    <rect x="380" y="210" width="200" height="40" rx="10" fill="#5BA1FF"></rect>
+  </g>
+</svg>
